@@ -1,0 +1,55 @@
+{
+	"name": "Input_Data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ExcelFileInputDataLakeGen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "extraccion - Copy.xlsx",
+				"fileSystem": "demo"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "CEDULA",
+				"type": "String"
+			},
+			{
+				"name": "NOMBRE",
+				"type": "String"
+			},
+			{
+				"name": "APELLIDOS",
+				"type": "String"
+			},
+			{
+				"name": "SEXO",
+				"type": "String"
+			},
+			{
+				"name": "FECHA_NACIMIENTO",
+				"type": "String"
+			},
+			{
+				"name": "CANTIDAD_HIJOS_VARONES",
+				"type": "String"
+			},
+			{
+				"name": "CANTIDAD_HIJOS_MUJERES",
+				"type": "String"
+			},
+			{
+				"name": "VALOR_MENUALXHIJO",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
