@@ -1,7 +1,0 @@
-{
-	"name": "mgPrivateEndpoint",
-	"properties": {
-		"privateLinkResourceId": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Sql/servers/josele95",
-		"groupId": "sqlServer"
-	}
-}
