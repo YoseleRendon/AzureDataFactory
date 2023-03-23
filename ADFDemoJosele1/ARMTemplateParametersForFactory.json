@@ -5,10 +5,16 @@
 		"factoryName": {
 			"value": "ADFDemoJosele1"
 		},
+		"AzPrivateEndpoint_connectionString": {
+			"value": ""
+		},
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
 		"ExcelFileInputDataLakeGen2_accountKey": {
+			"value": ""
+		},
+		"FileServer1_password": {
 			"value": ""
 		},
 		"LinkedServiceJoseleAzureDataLakeStorage1_accountKey": {
@@ -17,11 +23,32 @@
 		"LinkedService_SQLDB_connectionString": {
 			"value": ""
 		},
+		"SqlConection2Private_connectionString": {
+			"value": ""
+		},
+		"blbStorage_connectionString": {
+			"value": ""
+		},
+		"tbstorage_connectionString": {
+			"value": ""
+		},
 		"ExcelFileInputDataLakeGen2_properties_typeProperties_url": {
 			"value": "https://storagejosele2.dfs.core.windows.net/"
 		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "\\\\10.0.1.4/ADF"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "josele95"
+		},
 		"LinkedServiceJoseleAzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://storagejosele.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase396_properties_privateLinkResourceId": {
+			"value": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Sql/servers/josele95"
+		},
+		"AzureSqlDatabase396_properties_groupId": {
+			"value": "sqlServer"
 		}
 	}
 }
