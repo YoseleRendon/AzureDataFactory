@@ -1,0 +1,18 @@
+{
+	"name": "Schedule_TBIT-1minutes",
+	"properties": {
+		"description": "this trigger runs every minute",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2023-03-24T10:27:00",
+				"timeZone": "Mountain Standard Time (Mexico)"
+			}
+		}
+	}
+}
