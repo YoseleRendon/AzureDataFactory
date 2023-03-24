@@ -15,6 +15,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"BlobStorageLink_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'BlobStorageLink'"
+		},
 		"ExcelFileInputDataLakeGen2_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ExcelFileInputDataLakeGen2'"
@@ -34,6 +42,10 @@
 		"SqlConection2Private_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlConection2Private'"
+		},
+		"StorajeJosele1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'StorajeJosele1'"
 		},
 		"blbStorage_connectionString": {
 			"type": "secureString",
@@ -100,6 +112,12 @@
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"BlobStorageLink_connectionString": {
+						"value": "[parameters('BlobStorageLink_connectionString')]"
+					},
 					"ExcelFileInputDataLakeGen2_accountKey": {
 						"value": "[parameters('ExcelFileInputDataLakeGen2_accountKey')]"
 					},
@@ -111,6 +129,9 @@
 					},
 					"SqlConection2Private_connectionString": {
 						"value": "[parameters('SqlConection2Private_connectionString')]"
+					},
+					"StorajeJosele1_connectionString": {
+						"value": "[parameters('StorajeJosele1_connectionString')]"
 					},
 					"blbStorage_connectionString": {
 						"value": "[parameters('blbStorage_connectionString')]"
