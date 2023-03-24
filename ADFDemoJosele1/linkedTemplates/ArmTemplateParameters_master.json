@@ -23,6 +23,12 @@
 		"FileServer1_password": {
 			"value": ""
 		},
+		"JoseleStorageEndpoint_connectionString": {
+			"value": ""
+		},
+		"JoseleStorageEndpoint2_connectionString": {
+			"value": ""
+		},
 		"LinkedServiceJoseleAzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
@@ -53,11 +59,11 @@
 		"LinkedServiceJoseleAzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://storagejosele.dfs.core.windows.net/"
 		},
-		"AzureSqlDatabase396_properties_privateLinkResourceId": {
-			"value": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Sql/servers/josele95"
+		"AzureBlobStorage-Endpoint_properties_privateLinkResourceId": {
+			"value": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Storage/storageAccounts/storagejosele"
 		},
-		"AzureSqlDatabase396_properties_groupId": {
-			"value": "sqlServer"
+		"AzureBlobStorage-Endpoint_properties_groupId": {
+			"value": "blob"
 		},
 		"containerUri": {
 			"value": ""

@@ -31,6 +31,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'FileServer1'"
 		},
+		"JoseleStorageEndpoint_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'JoseleStorageEndpoint'"
+		},
+		"JoseleStorageEndpoint2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'JoseleStorageEndpoint2'"
+		},
 		"LinkedServiceJoseleAzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LinkedServiceJoseleAzureDataLakeStorage1'"
@@ -71,13 +79,13 @@
 			"type": "string",
 			"defaultValue": "https://storagejosele.dfs.core.windows.net/"
 		},
-		"AzureSqlDatabase396_properties_privateLinkResourceId": {
+		"AzureBlobStorage-Endpoint_properties_privateLinkResourceId": {
 			"type": "string",
-			"defaultValue": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Sql/servers/josele95"
+			"defaultValue": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Storage/storageAccounts/storagejosele"
 		},
-		"AzureSqlDatabase396_properties_groupId": {
+		"AzureBlobStorage-Endpoint_properties_groupId": {
 			"type": "string",
-			"defaultValue": "sqlServer"
+			"defaultValue": "blob"
 		}
 	},
 	"variables": {
@@ -919,7 +927,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "Emp"
+					"table": "EmpAdress"
 				}
 			},
 			"dependsOn": [
@@ -1411,6 +1419,44 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/JoseleStorageEndpoint')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('JoseleStorageEndpoint_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "AzureIRVN",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/AzureIRVN')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/JoseleStorageEndpoint2')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('JoseleStorageEndpoint2_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "AzureIRVN",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/AzureIRVN')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/LinkedServiceJoseleAzureDataLakeStorage1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -1493,6 +1539,35 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/AzureIRVN')]",
+			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "Managed",
+				"typeProperties": {
+					"computeProperties": {
+						"location": "East US",
+						"dataFlowProperties": {
+							"computeType": "General",
+							"coreCount": 8,
+							"timeToLive": 10,
+							"cleanup": false
+						},
+						"pipelineExternalComputeScaleProperties": {
+							"timeToLive": 60
+						}
+					}
+				},
+				"managedVirtualNetwork": {
+					"type": "ManagedVirtualNetworkReference",
+					"referenceName": "default"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/Shir')]",
 			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
 			"apiVersion": "2018-06-01",
@@ -1510,12 +1585,12 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/default/AzureSqlDatabase396')]",
+			"name": "[concat(parameters('factoryName'), '/default/AzureBlobStorage-Endpoint')]",
 			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"privateLinkResourceId": "[parameters('AzureSqlDatabase396_properties_privateLinkResourceId')]",
-				"groupId": "[parameters('AzureSqlDatabase396_properties_groupId')]"
+				"privateLinkResourceId": "[parameters('AzureBlobStorage-Endpoint_properties_privateLinkResourceId')]",
+				"groupId": "[parameters('AzureBlobStorage-Endpoint_properties_groupId')]"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/managedVirtualNetworks/default')]"

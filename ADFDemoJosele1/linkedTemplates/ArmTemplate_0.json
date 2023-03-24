@@ -294,7 +294,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "Emp"
+					"table": "EmpAdress"
 				}
 			},
 			"dependsOn": [
