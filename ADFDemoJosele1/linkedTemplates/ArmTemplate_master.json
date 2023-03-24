@@ -174,12 +174,6 @@
 					"FileServer1_password": {
 						"value": "[parameters('FileServer1_password')]"
 					},
-					"JoseleStorageEndpoint_connectionString": {
-						"value": "[parameters('JoseleStorageEndpoint_connectionString')]"
-					},
-					"JoseleStorageEndpoint2_connectionString": {
-						"value": "[parameters('JoseleStorageEndpoint2_connectionString')]"
-					},
 					"FileServer1_properties_typeProperties_host": {
 						"value": "[parameters('FileServer1_properties_typeProperties_host')]"
 					},
@@ -211,6 +205,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"JoseleStorageEndpoint_connectionString": {
+						"value": "[parameters('JoseleStorageEndpoint_connectionString')]"
+					},
+					"JoseleStorageEndpoint2_connectionString": {
+						"value": "[parameters('JoseleStorageEndpoint2_connectionString')]"
 					}
 				}
 			},

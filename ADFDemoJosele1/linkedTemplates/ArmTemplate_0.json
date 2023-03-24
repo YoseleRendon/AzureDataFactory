@@ -393,7 +393,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/FileDeleteMaster')]",
+			"name": "[concat(parameters('factoryName'), '/DelimitedText4')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -401,22 +401,18 @@
 					"referenceName": "StorajeJosele1",
 					"type": "LinkedServiceReference"
 				},
-				"parameters": {
-					"ContainerName": {
-						"type": "string"
-					}
-				},
 				"annotations": [],
-				"type": "Binary",
+				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
-						"container": {
-							"value": "@dataset().ContainerName",
-							"type": "Expression"
-						}
-					}
-				}
+						"container": "log"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"quoteChar": "\""
+				},
+				"schema": []
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/StorajeJosele1')]"
