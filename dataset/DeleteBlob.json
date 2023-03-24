@@ -1,0 +1,25 @@
+{
+	"name": "DeleteBlob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "StorajeJosele1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": {
+					"value": "@dataset().FolderName",
+					"type": "Expression"
+				}
+			}
+		}
+	}
+}
