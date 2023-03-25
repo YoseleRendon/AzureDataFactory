@@ -19,7 +19,7 @@
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/input/blobs/Emp_Address",
-			"blobPathEndsWith": ".txt",
+			"blobPathEndsWith": "txt",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Storage/storageAccounts/storagejosele",
 			"events": [
