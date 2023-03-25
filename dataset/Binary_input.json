@@ -11,6 +11,9 @@
 			},
 			"ContainerName": {
 				"type": "string"
+			},
+			"nuevo": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
