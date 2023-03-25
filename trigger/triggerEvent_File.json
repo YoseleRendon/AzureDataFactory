@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "if you drop a file it will run PL_customer pipeline",
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -23,7 +23,7 @@
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Storage/storageAccounts/storagejosele",
 			"events": [
-				"Microsoft.Storage.BlobDeleted"
+				"Microsoft.Storage.BlobCreated"
 			]
 		}
 	}
