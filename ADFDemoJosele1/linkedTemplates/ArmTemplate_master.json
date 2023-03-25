@@ -55,6 +55,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'StorajeJosele1'"
 		},
+		"StorajeJosele1_binaryFile_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'StorajeJosele1_binaryFile'"
+		},
 		"blbStorage_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blbStorage'"
@@ -62,10 +66,6 @@
 		"tbstorage_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'tbstorage'"
-		},
-		"StorajeJosele1_binaryFile_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'StorajeJosele1_binaryFile'"
 		},
 		"ExcelFileInputDataLakeGen2_properties_typeProperties_url": {
 			"type": "string",
@@ -83,14 +83,6 @@
 			"type": "string",
 			"defaultValue": "https://storagejosele.dfs.core.windows.net/"
 		},
-		"AzureBlobStorage-Endpoint_properties_privateLinkResourceId": {
-			"type": "string",
-			"defaultValue": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Storage/storageAccounts/storagejosele"
-		},
-		"AzureBlobStorage-Endpoint_properties_groupId": {
-			"type": "string",
-			"defaultValue": "blob"
-		},
 		"triggerEvent_File_properties_PL_Event_Trigger_parameters_fname": {
 			"type": "string",
 			"defaultValue": "@triggerBody().fileName"
@@ -102,6 +94,14 @@
 		"triggerEvent_File_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Storage/storageAccounts/storagejosele"
+		},
+		"AzureBlobStorage-Endpoint_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Storage/storageAccounts/storagejosele"
+		},
+		"AzureBlobStorage-Endpoint_properties_groupId": {
+			"type": "string",
+			"defaultValue": "blob"
 		},
 		"containerUri": {
 			"type": "string",
@@ -157,14 +157,14 @@
 					"StorajeJosele1_connectionString": {
 						"value": "[parameters('StorajeJosele1_connectionString')]"
 					},
+					"StorajeJosele1_binaryFile_connectionString": {
+						"value": "[parameters('StorajeJosele1_binaryFile_connectionString')]"
+					},
 					"blbStorage_connectionString": {
 						"value": "[parameters('blbStorage_connectionString')]"
 					},
 					"tbstorage_connectionString": {
 						"value": "[parameters('tbstorage_connectionString')]"
-					},
-					"StorajeJosele1_binaryFile_connectionString": {
-						"value": "[parameters('StorajeJosele1_binaryFile_connectionString')]"
 					},
 					"ExcelFileInputDataLakeGen2_properties_typeProperties_url": {
 						"value": "[parameters('ExcelFileInputDataLakeGen2_properties_typeProperties_url')]"
