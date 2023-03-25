@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "this trigger runs every minute",
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
