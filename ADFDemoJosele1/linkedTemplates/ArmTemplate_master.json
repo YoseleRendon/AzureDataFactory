@@ -63,6 +63,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'tbstorage'"
 		},
+		"StorajeJosele1_binaryFile_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'StorajeJosele1_binaryFile'"
+		},
 		"ExcelFileInputDataLakeGen2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storagejosele2.dfs.core.windows.net/"
@@ -86,6 +90,18 @@
 		"AzureBlobStorage-Endpoint_properties_groupId": {
 			"type": "string",
 			"defaultValue": "blob"
+		},
+		"triggerEvent_File_properties_PL_Event_Trigger_parameters_fname": {
+			"type": "string",
+			"defaultValue": "@triggerBody().fileName"
+		},
+		"triggerEvent_File_properties_PL_Event_Trigger_parameters_cname": {
+			"type": "string",
+			"defaultValue": "@triggerBody().folderPath"
+		},
+		"triggerEvent_File_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Storage/storageAccounts/storagejosele"
 		},
 		"containerUri": {
 			"type": "string",
@@ -146,6 +162,9 @@
 					},
 					"tbstorage_connectionString": {
 						"value": "[parameters('tbstorage_connectionString')]"
+					},
+					"StorajeJosele1_binaryFile_connectionString": {
+						"value": "[parameters('StorajeJosele1_binaryFile_connectionString')]"
 					},
 					"ExcelFileInputDataLakeGen2_properties_typeProperties_url": {
 						"value": "[parameters('ExcelFileInputDataLakeGen2_properties_typeProperties_url')]"
@@ -211,6 +230,15 @@
 					},
 					"JoseleStorageEndpoint2_connectionString": {
 						"value": "[parameters('JoseleStorageEndpoint2_connectionString')]"
+					},
+					"triggerEvent_File_properties_PL_Event_Trigger_parameters_fname": {
+						"value": "[parameters('triggerEvent_File_properties_PL_Event_Trigger_parameters_fname')]"
+					},
+					"triggerEvent_File_properties_PL_Event_Trigger_parameters_cname": {
+						"value": "[parameters('triggerEvent_File_properties_PL_Event_Trigger_parameters_cname')]"
+					},
+					"triggerEvent_File_properties_typeProperties_scope": {
+						"value": "[parameters('triggerEvent_File_properties_typeProperties_scope')]"
 					}
 				}
 			},

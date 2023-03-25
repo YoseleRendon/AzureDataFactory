@@ -47,6 +47,9 @@
 		"tbstorage_connectionString": {
 			"value": ""
 		},
+		"StorajeJosele1_binaryFile_connectionString": {
+			"value": ""
+		},
 		"ExcelFileInputDataLakeGen2_properties_typeProperties_url": {
 			"value": "https://storagejosele2.dfs.core.windows.net/"
 		},
@@ -64,6 +67,15 @@
 		},
 		"AzureBlobStorage-Endpoint_properties_groupId": {
 			"value": "blob"
+		},
+		"triggerEvent_File_properties_PL_Event_Trigger_parameters_fname": {
+			"value": "@triggerBody().fileName"
+		},
+		"triggerEvent_File_properties_PL_Event_Trigger_parameters_cname": {
+			"value": "@triggerBody().folderPath"
+		},
+		"triggerEvent_File_properties_typeProperties_scope": {
+			"value": "/subscriptions/a84b6b23-0937-41be-a76e-8649a0d13dca/resourceGroups/MiPrimerGroup/providers/Microsoft.Storage/storageAccounts/storagejosele"
 		}
 	}
 }
