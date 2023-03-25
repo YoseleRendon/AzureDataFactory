@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "if you drop a file it will run PL_customer pipeline",
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
