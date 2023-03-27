@@ -1,7 +1,0 @@
-{
-	"name": "SelfHostedIR",
-	"properties": {
-		"type": "SelfHosted",
-		"description": "self hosted Josele IR Demo"
-	}
-}
