@@ -1,0 +1,17 @@
+{
+	"name": "BinaryDestinationGen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobStorageGen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "inputgen2"
+			}
+		}
+	}
+}
