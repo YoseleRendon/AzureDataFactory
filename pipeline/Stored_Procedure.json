@@ -97,7 +97,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "Customer_Table_SQL",
+									"referenceName": "Customer_Dest",
 									"type": "DatasetReference"
 								}
 							]

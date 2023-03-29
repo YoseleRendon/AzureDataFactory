@@ -1,5 +1,5 @@
 {
-	"name": "Customer_Table_SQL",
+	"name": "Customer_Dest",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LinkedService_SQLDB",
@@ -7,6 +7,10 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "customer_Dest"
+		}
 	}
 }
