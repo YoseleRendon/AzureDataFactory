@@ -1,0 +1,17 @@
+{
+	"name": "Customer_Table_SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkedService_SQLDB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"RegionName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
