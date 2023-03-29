@@ -1,5 +1,5 @@
 {
-	"name": "PL_Empty_Insert",
+	"name": "PL_Empty_Insert_ifCondition",
 	"properties": {
 		"activities": [
 			{
@@ -24,7 +24,7 @@
 						"referenceName": "Customer_Dest",
 						"type": "DatasetReference"
 					},
-					"firstRowOnly": false
+					"firstRowOnly": true
 				}
 			},
 			{
@@ -46,7 +46,7 @@
 					},
 					"ifTrueActivities": [
 						{
-							"name": "Copy data1",
+							"name": "Copy data1_copy1",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
