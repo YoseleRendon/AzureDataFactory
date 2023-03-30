@@ -8,6 +8,10 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"expression": {
+						"value": "@contains(toLower(pipeline().parameters.Pfile),'customer')",
+						"type": "Expression"
+					},
 					"ifFalseActivities": [
 						{
 							"name": "Wait_False",
@@ -37,6 +41,10 @@
 			"Pfile": {
 				"type": "string",
 				"defaultValue": "customer"
+			},
+			"Number": {
+				"type": "int",
+				"defaultValue": 10
 			}
 		},
 		"annotations": []
