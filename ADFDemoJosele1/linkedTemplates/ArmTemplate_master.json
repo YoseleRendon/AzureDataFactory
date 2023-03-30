@@ -19,9 +19,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
 		},
+		"BlobStorageGen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'BlobStorageGen2'"
+		},
 		"BlobStorageLink_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'BlobStorageLink'"
+		},
+		"Conection_Endpoint_blobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Conection_Endpoint_blobStorage'"
 		},
 		"ExcelFileInputDataLakeGen2_accountKey": {
 			"type": "secureString",
@@ -66,6 +74,10 @@
 		"tbstorage_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'tbstorage'"
+		},
+		"BlobStorageGen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://fstoragegen2.dfs.core.windows.net/"
 		},
 		"ExcelFileInputDataLakeGen2_properties_typeProperties_url": {
 			"type": "string",
@@ -130,14 +142,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzPrivateEndpoint_connectionString": {
-						"value": "[parameters('AzPrivateEndpoint_connectionString')]"
-					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
 					"AzureBlobStorage2_connectionString": {
 						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"BlobStorageGen2_accountKey": {
+						"value": "[parameters('BlobStorageGen2_accountKey')]"
 					},
 					"BlobStorageLink_connectionString": {
 						"value": "[parameters('BlobStorageLink_connectionString')]"
@@ -165,6 +177,9 @@
 					},
 					"tbstorage_connectionString": {
 						"value": "[parameters('tbstorage_connectionString')]"
+					},
+					"BlobStorageGen2_properties_typeProperties_url": {
+						"value": "[parameters('BlobStorageGen2_properties_typeProperties_url')]"
 					},
 					"ExcelFileInputDataLakeGen2_properties_typeProperties_url": {
 						"value": "[parameters('ExcelFileInputDataLakeGen2_properties_typeProperties_url')]"
@@ -198,12 +213,6 @@
 					},
 					"FileServer1_properties_typeProperties_userId": {
 						"value": "[parameters('FileServer1_properties_typeProperties_userId')]"
-					},
-					"AzureBlobStorage-Endpoint_properties_privateLinkResourceId": {
-						"value": "[parameters('AzureBlobStorage-Endpoint_properties_privateLinkResourceId')]"
-					},
-					"AzureBlobStorage-Endpoint_properties_groupId": {
-						"value": "[parameters('AzureBlobStorage-Endpoint_properties_groupId')]"
 					}
 				}
 			},
@@ -225,11 +234,43 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzPrivateEndpoint_connectionString": {
+						"value": "[parameters('AzPrivateEndpoint_connectionString')]"
+					},
+					"Conection_Endpoint_blobStorage_connectionString": {
+						"value": "[parameters('Conection_Endpoint_blobStorage_connectionString')]"
+					},
 					"JoseleStorageEndpoint_connectionString": {
 						"value": "[parameters('JoseleStorageEndpoint_connectionString')]"
 					},
 					"JoseleStorageEndpoint2_connectionString": {
 						"value": "[parameters('JoseleStorageEndpoint2_connectionString')]"
+					},
+					"AzureBlobStorage-Endpoint_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureBlobStorage-Endpoint_properties_privateLinkResourceId')]"
+					},
+					"AzureBlobStorage-Endpoint_properties_groupId": {
+						"value": "[parameters('AzureBlobStorage-Endpoint_properties_groupId')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ADFDemoJosele1_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "ADFDemoJosele1_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
 					},
 					"triggerEvent_File_properties_PL_Event_Trigger_parameters_fname": {
 						"value": "[parameters('triggerEvent_File_properties_PL_Event_Trigger_parameters_fname')]"
@@ -243,7 +284,7 @@
 				}
 			},
 			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'ADFDemoJosele1_ArmTemplate_1')]"
+				"[resourceId('Microsoft.Resources/deployments', 'ADFDemoJosele1_ArmTemplate_2')]"
 			]
 		}
 	]

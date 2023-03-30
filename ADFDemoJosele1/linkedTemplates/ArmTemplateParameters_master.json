@@ -14,7 +14,13 @@
 		"AzureBlobStorage2_connectionString": {
 			"value": ""
 		},
+		"BlobStorageGen2_accountKey": {
+			"value": ""
+		},
 		"BlobStorageLink_connectionString": {
+			"value": ""
+		},
+		"Conection_Endpoint_blobStorage_connectionString": {
 			"value": ""
 		},
 		"ExcelFileInputDataLakeGen2_accountKey": {
@@ -49,6 +55,9 @@
 		},
 		"tbstorage_connectionString": {
 			"value": ""
+		},
+		"BlobStorageGen2_properties_typeProperties_url": {
+			"value": "https://fstoragegen2.dfs.core.windows.net/"
 		},
 		"ExcelFileInputDataLakeGen2_properties_typeProperties_url": {
 			"value": "https://storagejosele2.dfs.core.windows.net/"
