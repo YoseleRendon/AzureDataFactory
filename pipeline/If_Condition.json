@@ -1,0 +1,44 @@
+{
+	"name": "If_Condition",
+	"properties": {
+		"activities": [
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"ifFalseActivities": [
+						{
+							"name": "Wait_False",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 4
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Wait_True",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"Pfile": {
+				"type": "string",
+				"defaultValue": "customer"
+			}
+		},
+		"annotations": []
+	}
+}
