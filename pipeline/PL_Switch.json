@@ -1,0 +1,67 @@
+{
+	"name": "PL_Switch",
+	"properties": {
+		"activities": [
+			{
+				"name": "My Switch Demo",
+				"type": "Switch",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"on": {
+						"value": "@toLower(pipeline().parameters.pfile)",
+						"type": "Expression"
+					},
+					"cases": [
+						{
+							"value": "customer",
+							"activities": [
+								{
+									"name": "Customer_Wait_Activity",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 1
+									}
+								}
+							]
+						},
+						{
+							"value": "product",
+							"activities": [
+								{
+									"name": "Product_Wait",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 14
+									}
+								}
+							]
+						}
+					],
+					"defaultActivities": [
+						{
+							"name": "On Default_ Delete Files",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 5
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"pfile": {
+				"type": "string",
+				"defaultValue": "customer"
+			}
+		},
+		"annotations": []
+	}
+}
