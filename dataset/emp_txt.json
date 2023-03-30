@@ -1,0 +1,24 @@
+{
+	"name": "emp_txt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Conection_Endpoint_blobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Test_Emp.txt",
+				"folderPath": "input",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
