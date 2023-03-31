@@ -1,0 +1,39 @@
+{
+	"name": "AzureSSIR",
+	"properties": {
+		"type": "Managed",
+		"description": "this is my SSIS-IR",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "East US",
+				"nodeSize": "Standard_D2_v3",
+				"numberOfNodes": 2,
+				"maxParallelExecutionsPerNode": 2
+			},
+			"ssisProperties": {
+				"catalogInfo": {
+					"catalogServerEndpoint": "josele95.database.windows.net",
+					"catalogAdminUserName": "josele95",
+					"catalogAdminPassword": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"catalogPricingTier": "S1"
+				},
+				"edition": "Standard",
+				"licenseType": "LicenseIncluded",
+				"dataProxyProperties": {
+					"connectVia": {
+						"type": "IntegrationRuntimeReference",
+						"referenceName": "SelfHosted-IR"
+					},
+					"stagingLinkedService": {
+						"type": "LinkedServiceReference",
+						"referenceName": "StorajeJosele1"
+					},
+					"path": "ssis"
+				}
+			}
+		}
+	}
+}
