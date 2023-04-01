@@ -37,7 +37,10 @@
 				"name": "valor_mensualx_hijos",
 				"type": "varchar"
 			}
-		]
+		],
+		"typeProperties": {
+			"schema": "dbo"
+		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
