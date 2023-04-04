@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "StorageJosele1",
+						"referenceName": "StorageJosele1_NoParameter",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -154,7 +154,7 @@
 									},
 									"Rowcnt": {
 										"value": {
-											"value": "@activity('Copy data1').output.rowscopied",
+											"value": "@activity('Copy data1').output.rowsCopied",
 											"type": "Expression"
 										},
 										"type": "Int32"
