@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -60,11 +61,7 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [
-								{
-									"name": ""
-								}
-							],
+							"userProperties": [],
 							"typeProperties": {
 								"source": {
 									"type": "DelimitedTextSource",
@@ -97,7 +94,13 @@
 							"inputs": [
 								{
 									"referenceName": "StorageJosele1_Parameter",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"FileName": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
