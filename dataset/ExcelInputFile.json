@@ -1,0 +1,25 @@
+{
+	"name": "ExcelInputFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ExcelLoad",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dSheetName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "extraccion.xlsx",
+				"container": "input"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
