@@ -1,5 +1,5 @@
 {
-	"name": "pipeline5",
+	"name": "ExecutePipeline",
 	"properties": {
 		"activities": [
 			{
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"packageLocation": {
-						"packagePath": "\\\\storagejosele.file.core.windows.net\\ssispackagestore\\ADF_Pipeline.ispac:Pkg_customer.dtsx",
+						"packagePath": "\\\\storagejosele.file.core.windows.net\\packagedeployment\\Pkg_customer.dtsx",
 						"type": "File",
 						"typeProperties": {
 							"accessCredential": {
@@ -26,21 +26,17 @@
 									"type": "SecureString",
 									"value": "**********"
 								}
-							}
+							},
+							"configurationPath": "\\\\storagejosele.file.core.windows.net\\packagedeployment\\MyPackageDeployment.dtsConfig"
 						}
 					},
 					"connectVia": {
-						"referenceName": "ssisprojectdeployment",
+						"referenceName": "AzureFileSSIS",
 						"type": "IntegrationRuntimeReference"
 					},
 					"loggingLevel": "Basic",
-					"packageParameters": {
-						"Password": {
-							"value": "Josele#13"
-						}
-					},
 					"logLocation": {
-						"logPath": "\\\\storagejosele.file.core.windows.net\\ssislogs2",
+						"logPath": "\\\\storagejosele.file.core.windows.net\\ssislogs",
 						"type": "File",
 						"typeProperties": {
 							"accessCredential": {

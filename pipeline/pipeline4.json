@@ -20,10 +20,6 @@
 						"type": "SSISDB"
 					},
 					"environmentPath": null,
-					"connectVia": {
-						"referenceName": "AzureSSIR",
-						"type": "IntegrationRuntimeReference"
-					},
 					"loggingLevel": "Basic"
 				}
 			}
