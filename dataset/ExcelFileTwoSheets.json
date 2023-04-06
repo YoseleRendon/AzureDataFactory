@@ -1,0 +1,24 @@
+{
+	"name": "ExcelFileTwoSheets",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ExcelLinkedTwoSheets",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SheetName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "extraccion.xlsx",
+				"container": "input"
+			}
+		},
+		"schema": []
+	}
+}
