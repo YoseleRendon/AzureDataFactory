@@ -1,0 +1,24 @@
+{
+	"name": "Emp_Test_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "StorajeJosele1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Test_Emp.txt",
+				"folderPath": "input",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
