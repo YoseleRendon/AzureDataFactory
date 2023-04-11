@@ -1,0 +1,55 @@
+{
+	"name": "PL_Variables",
+	"properties": {
+		"activities": [
+			{
+				"name": "Fecha Inicio",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Var1",
+					"value": {
+						"value": "@formatDateTime(addDays(utcnow(),-2),'yyyyMMdd')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Fecha Fin",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "variable",
+					"value": {
+						"value": "@utcnow()",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"fecha_inicio": {
+				"type": "string",
+				"defaultValue": "20230411"
+			},
+			"fecha_fin": {
+				"type": "string",
+				"defaultValue": "20230410"
+			}
+		},
+		"variables": {
+			"Var1": {
+				"type": "String"
+			},
+			"var2": {
+				"type": "String"
+			},
+			"variable": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
